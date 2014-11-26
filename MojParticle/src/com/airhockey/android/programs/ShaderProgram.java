@@ -17,13 +17,14 @@ import com.airhockey.android.util.TextResourceReader;
 abstract class ShaderProgram {
 	// Uniform constants
 	protected static final String U_MATRIX = "u_Matrix";
-	protected static final String U_TIME = "u_Time";
-
+	protected static final String U_VRIJEME = "u_Vrijeme";
+	
 	// Attribute constants
-	protected static final String A_POSITION = "a_Position";
-	protected static final String A_COLOR = "a_Color";
-	protected static final String A_DIRECTION_VECTOR = "a_DirectionVector";
+	protected static final String A_POSICIJA = "a_Posicija";
+	protected static final String A_BOJA = "a_Boja";
+	protected static final String A_VEKTOR = "a_Vektor";
 	protected static final String A_VRIJEME_NASTANKA = "a_VrijemeNastanka";
+
 
 	// Shader program
 	protected final int program;
