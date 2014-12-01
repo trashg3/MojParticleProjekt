@@ -1,17 +1,12 @@
 package com.airhockey.android.programs;
 
-import static android.opengl.GLES20.GL_TEXTURE0;
-import static android.opengl.GLES20.GL_TEXTURE_2D;
-import static android.opengl.GLES20.glActiveTexture;
-import static android.opengl.GLES20.glBindTexture;
 import static android.opengl.GLES20.glGetAttribLocation;
 import static android.opengl.GLES20.glGetUniformLocation;
 import static android.opengl.GLES20.glUniform1f;
 import static android.opengl.GLES20.glUniformMatrix4fv;
+import android.content.Context;
 
 import com.openGL.particles.R;
-
-import android.content.Context;
 
 public class ParticleProgram extends ShaderProgram {
 
@@ -23,7 +18,7 @@ public class ParticleProgram extends ShaderProgram {
 	private int aVektorLokacija;
 	private int aVrijemeNastankaLokacija;
 	
-	protected ParticleProgram(Context context) {
+	public ParticleProgram(Context context) {
 		super(context, R.raw.particle_vertex_shader, R.raw.particle_fragment_shaderi);
 		
 		uMatrixLokacija = glGetUniformLocation(program, U_MATRIX);
@@ -60,6 +55,6 @@ public class ParticleProgram extends ShaderProgram {
 	}
 	
 	
-
+	
 	
 }

@@ -1,4 +1,4 @@
-precision medump float;
+precision mediump float;
 
 varying vec3 v_Boja;
 varying float v_ProtekloVrijeme;

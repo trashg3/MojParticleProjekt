@@ -28,6 +28,12 @@ public class VertexArray {
             .put(vertexData);
     }
 
+    /**Personalizira podatke za glVertexAttribPointer funkciju.
+     * @param dataOffset - odakle pocinje citati podatke
+     * @param attributeLocation - varijabla u kojoj je zdruzen program i atribut
+     * @param componentCount - koliko komponenti ima svaki atribut npr 3
+     * @param stride
+     */
     public void setVertexAttribPointer(int dataOffset, int attributeLocation,
         int componentCount, int stride) {        
         floatBuffer.position(dataOffset);        
@@ -36,6 +42,13 @@ public class VertexArray {
         glEnableVertexAttribArray(attributeLocation);
         
         floatBuffer.position(0);
+    }
+    
+    public void updateFloatBuffer(float [] informacijeZaCestice, int pocetak, int kraj) {
+    	
+    	floatBuffer.position(pocetak);
+    	floatBuffer.put(informacijeZaCestice, pocetak, kraj);
+    	floatBuffer.position(0);
     }
     
 

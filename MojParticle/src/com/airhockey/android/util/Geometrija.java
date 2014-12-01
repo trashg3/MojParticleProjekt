@@ -2,11 +2,11 @@ package com.airhockey.android.util;
 
 public class Geometrija {
 
-	public class Cestica {
+	public static class Cestica {
 
-		private float x;
-		private float y;
-		private float z;
+		public float x;
+		public float y;
+		public float z;
 
 		public Cestica(float x, float y, float z) {
 			this.x = x;
@@ -15,14 +15,16 @@ public class Geometrija {
 		}
 	}
 
-	public class Vektor {
+	public static class Vektor {
 
-		private float x;
-		private float y;
+		public float x;
+		public float y;
+		public float z;
 
-		public Vektor(float x, float y) {
+		public Vektor(float x, float y, float z) {
 			this.x = x;
 			this.y = y;
+			this.z = z;
 		}
 	}
 }
