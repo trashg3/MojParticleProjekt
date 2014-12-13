@@ -47,6 +47,9 @@ public class ParticlesRenderer implements Renderer {
 	Cestica cestica;
 	long globalStartTime;
 
+	final float angleVarianceInDegres = 5f;
+	final float speedVariance = 1f;
+	
 	public ParticlesRenderer(Context context) {
 
 		this.context = context;
@@ -64,11 +67,11 @@ public class ParticlesRenderer implements Renderer {
 		vektor = new Vektor(0f, 0.5f, 0f);
 
 		crveniParticlesPlayer = new ParticlesPlayer(new Cestica(-1f, 0f, 0f),
-				vektor, Color.rgb(255, 88, 122));
+				vektor, Color.rgb(255, 88, 122), angleVarianceInDegres, speedVariance);
 		zeleniParticlesPlayer = new ParticlesPlayer(new Cestica(0f, 0f, 0f),
-				vektor, Color.rgb(55, 255, 88));
+				vektor, Color.rgb(55, 255, 88),angleVarianceInDegres, speedVariance);
 		plaviParticlesPlayer = new ParticlesPlayer(new Cestica(1f, 0f, 0f),
-				vektor, Color.rgb(67, 17, 255));
+				vektor, Color.rgb(67, 17, 255),angleVarianceInDegres, speedVariance);
 
 	}
 

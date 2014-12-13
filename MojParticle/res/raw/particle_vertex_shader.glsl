@@ -13,9 +13,11 @@ void main(){
 
 	v_Boja = a_Boja;
 	v_ProtekloVrijeme = u_Vrijeme - a_VrijemeNastanka;
+	float gravitacija = v_ProtekloVrijeme * v_ProtekloVrijeme / 8.0;
 	vec3 TrenutnaPozicija = a_Posicija + (a_Vektor * v_ProtekloVrijeme);
+	TrenutnaPozicija.y -= gravitacija; 
 	gl_Position = u_Matrix * vec4(TrenutnaPozicija, 1.0);
-	gl_PointSize = 15.0;	
+	gl_PointSize = 10.0;	
 
 }
 	
