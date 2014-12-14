@@ -17,7 +17,7 @@ void main(){
 	vec3 TrenutnaPozicija = a_Posicija + (a_Vektor * v_ProtekloVrijeme);
 	TrenutnaPozicija.y -= gravitacija; 
 	gl_Position = u_Matrix * vec4(TrenutnaPozicija, 1.0);
-	gl_PointSize = 10.0;	
+	gl_PointSize = 25.0;	
 
 }
 	
